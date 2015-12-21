@@ -1,8 +1,8 @@
 #include "../include/flags.h"
 
-Flags::Flags(int argc, char* argv[]){
-  _argc = argc;
-  //_argv = argv;
+Flags::Flags(int argc, char** argv){
+  m_argc = argc;
+  m_argv = argv;
 }
 
 bool Flags::Parse(){

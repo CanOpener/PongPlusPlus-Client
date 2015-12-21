@@ -7,8 +7,8 @@
 
 class Flags {
 private:
-  int _argc;
-  char* _argv[];
+  int m_argc;
+  char** m_argv;
 
   struct data {
     unsigned char type; // 1: string, 2: int, 3: bool
