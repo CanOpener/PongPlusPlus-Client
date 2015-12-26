@@ -14,15 +14,13 @@ private:
   SDL_GLContext m_glContext;
   bool m_windowOpen;
 
-  Screen() {} // Default private constructor
-
+  void init();
 public:
   Screen(int height, int width, const std::string& title);
-  virtual ~Screen();
+  ~Screen();
 
-  void Init();
   void Update();
-  bool IsWindowOpen();
+  bool IsWindowOpen() const;
 };
 
 #endif

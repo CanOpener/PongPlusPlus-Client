@@ -1,10 +1,12 @@
-#include "../include/screen.h"
+#include "screen.h"
 
 // Constructor
 Screen::Screen(int width, int height, const std::string& title){
   m_width = width;
   m_height = height;
   m_title = title;
+
+  init();
 }
 
 Screen::~Screen(){
@@ -14,7 +16,7 @@ Screen::~Screen(){
 }
 
 // Screen initializer
-void Screen::Init(){
+void Screen::init(){
 
   // Initialize SDL
   SDL_Init(SDL_INIT_EVERYTHING);
@@ -41,7 +43,7 @@ void Screen::Init(){
   m_windowOpen = true;
 }
 
-bool Screen::IsWindowOpen(){
+bool Screen::IsWindowOpen() const {
   return m_windowOpen;
 }
 

@@ -1,7 +1,6 @@
 #include <iostream>
-#include "../include/screen.h"
-#include "../include/flags.h"
-#include "../include/game.h"
+#include "flags.h"
+#include "game.h"
 
 int main(int argc, char* argv[]){
 
@@ -9,10 +8,8 @@ int main(int argc, char* argv[]){
   Flags flags(argc, argv);
   flags.Parse();
 
-  // Create a new screen and handle the screen by the main Game class
-  Screen screen(800,600,"PongPlusPlus-Client");
-  screen.Init();
-  Game game(&screen);
+  // Create a new Game class
+  Game game;
 
   // Start running the game
   game.Run();

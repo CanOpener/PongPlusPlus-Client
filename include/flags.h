@@ -16,8 +16,6 @@ private:
   };
   std::map<std::string,data> parsed;
 
-  Flags(){};
-
 public:
   Flags(int argc, char* argv[]);
   bool Parse();

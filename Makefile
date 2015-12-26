@@ -13,7 +13,7 @@ CC := g++
 # Source directory
 SRCDIR := src
 
-# Build directory for 
+# Build directory for
 BUILDDIR := build
 
 # Target Output file
@@ -23,7 +23,7 @@ TARGET := bin/pppc
 SRCEXT := cpp
 
 # List of flags
-CFLAGS := -Wall -std=c++14
+CFLAGS := -Wall -std=c++14 -O0 -m64
 
 # Libraries to be used
 LIB := -pthread -lGL -lSDL2 -lGLEW
@@ -35,7 +35,7 @@ LIB := -pthread -lGL -lSDL2 -lGLEW
 #               DO NOT EDIT                #
 ############################################
 # Includes
-INCLUDE := -I include
+INC := -I include
 # All source files
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 # All object files

@@ -1,4 +1,4 @@
-#include "../include/flags.h"
+#include "flags.h"
 
 Flags::Flags(int argc, char** argv){
   m_argc = argc;
@@ -10,7 +10,7 @@ bool Flags::Parse(){
   return true;
 }
 
-std::string Flags::GetString(std::string key){
+std::string Flags::GetString(std::string key) {
   auto v = parsed[key];
   if(v.type != 1){
     return "";
@@ -19,7 +19,7 @@ std::string Flags::GetString(std::string key){
   return v.content;
 }
 
-int Flags::GetInt(std::string key){
+int Flags::GetInt(std::string key) {
   auto v = parsed[key];
   if(v.type != 2){
     return INT_MAX;
@@ -28,7 +28,7 @@ int Flags::GetInt(std::string key){
   return atoi(v.content.c_str());
 }
 
-bool Flags::GetBool(std::string key){
+bool Flags::GetBool(std::string key) {
   auto v = parsed[key];
   if(v.type != 3){
     return false;
